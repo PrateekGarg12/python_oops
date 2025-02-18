@@ -1,0 +1,31 @@
+#child class..
+# Single inheritance..
+class Stu():
+  location='Jaipur'
+
+  def __init__(self,name,age):
+    self.name=name
+    self.age=age
+  def getInfo(self):
+    return f"Name of student is: {self.name}, Age of student is: {self.age}"
+  def statusupdated(self):
+    print("Everything is ok...")
+
+class Training(Stu):
+  def __init__(self,batch,duration):
+    self.batch=batch
+    self.duration=duration
+
+  def getInfo(self):
+    print(f"Batch of training is: {self.batch}, and duration of training is: {self.duration} hours")
+
+  def statusupdated(self):
+    print("We are in another class")
+
+a=Stu("Rahul",25)
+a.getInfo()
+# a.statusupdated()
+
+b=Training("Python",5)
+b.getInfo()
+b.statusupdated()
