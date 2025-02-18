@@ -1,0 +1,21 @@
+#super method
+
+class parent:
+  def __init__(self,name):
+    self.name=name
+
+  def greet(self):
+    print(f"Hello, I am {self.name} from the parent class")
+
+class child(parent):
+  def __init__(self,name,age):
+    super().__init__(name)  #Call the parent's __init__method
+    self.age=age
+
+  def greet(self):
+    super().greet() #Call the parent's greet method.
+    print(f"I am {self.age} years old from the child class")
+
+#Usage.
+child=child("sam",10)
+child.greet()
