@@ -1,0 +1,31 @@
+class Customer:
+  def __init__(self,name,cont_details):
+    self.name=name
+    self.cont_details=cont_details
+  def getInfo(self):
+    return f"Customer Name is: {self.name}, Contact Details of Custome is: {self.cont_details}"
+
+class Product:
+  def __init__(self,pr_name,pr_quant,pr_price):
+    self.pr_name=pr_name
+    # self.pr_price=pr_price
+    self.pr_quant=pr_quant
+
+
+  def getdetail(self):
+    total=self.pr_price*self.pr_quant
+    print(f"Product Price is: {self.total}")
+    #print(f"Product Name is: {self.pr_name}, Product Quantity is: {self.pr_quant}, Product Price is: {self.pr_price}")
+
+
+class Order:
+  def __init__(self,Customer,Product):
+    self.Customer=Customer
+    self.Croducts=Product
+
+
+a=Customer("Piyush","Jaipur")
+a.getInfo()
+b=Product("Laptop",4,5000)
+b.getdetail()
+c=Order(a,b)
