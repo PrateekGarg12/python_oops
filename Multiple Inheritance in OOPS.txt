@@ -1,0 +1,18 @@
+#Multiple Inheritance Example..
+
+class Engine:
+ def start_engine(self):
+   print("Engine Started")
+
+class Wheels:
+ def rotate_wheels(self):
+   print("Wheels are rotating")
+
+class Car(Engine,Wheels):  #Inheritating from engine and wheels..
+  def drive(self):
+    print("Car is driving")
+
+my_car=Car()
+my_car.start_engine()
+my_car.rotate_wheels()
+my_car.drive()
