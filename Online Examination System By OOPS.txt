@@ -1,0 +1,43 @@
+Case Study2: Online Examination System
+
+Problem: Create a system for online examinations where:
+
+Student Scores are private and cannot be accssed directly
+
+Scores can only be added or retrived using specefic methods
+
+Implement a feature to calculate the average score of the student
+
+"""
+
+# CASE2 SOLVE...
+class student:
+  def __init__(self,name):
+    self.name=name
+    self.__scores=[]
+
+  def add_score(self,score):
+    self.__scores.append(score)
+    return f"Score added for {self.name}."
+
+  def get_scores(self):
+    return f"Scores for {self.name}: {self.__scores}"
+
+  def calculate_average(self):
+    if self.__scores:
+      return sum(self.__scores)/len(self.__scores)
+
+
+student1=student("aditya")
+print(student1.add_score(90))
+print(student1.add_score(80))
+print(student1.add_score(70))
+
+print(f"Scores for {student1.name}: {student1.get_scores()}")
+print(f"Average score for {student1.name}: {student1.calculate_average()}")
+
+student2=student("Rohit")
+print(student2.add_score(85))
+print(student2.add_score(95))
+print(f"Scores for {student2.name}: {student2.get_scores()}")
+print(f"Average score for {student2.name}: {student2.calculate_average()}")
