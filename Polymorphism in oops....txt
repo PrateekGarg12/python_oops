@@ -1,0 +1,25 @@
+#Polymorphism in oops...
+class Animal:
+  def speak(self):
+    pass #Base method with no implementation..
+
+class Dog(Animal):
+  def speak(self):
+    return "Woof!"
+
+class Cat(Animal):
+  def speak(self):
+    return "Meow!"
+
+class Cow(Animal):
+  def speak(self):
+    return "Moo!"
+
+#Function to demonstrate polymorphism..
+def make_animal_sound(animal):
+  print(animal.speak())
+
+#Usage
+animals=[Dog(),Cat(),Cow()]
+for animal in animals:
+  make_animal_sound(animal)
