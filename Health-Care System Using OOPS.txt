@@ -1,0 +1,30 @@
+Case Study 1: Healthcare System(Patient Record Management)
+
+Problem: Develop a system for managing patient records in a hospital where:.
+
+Patient details(name, age and medical history) should be private..
+
+Provide a methiod to add new medical records while keeping previous data secure..
+
+
+#CASE1   SOLVE..
+
+class patient:
+  def __init__(self,name,age):
+    self.__name=name    #Encapsulated name
+    self.__age=age      #Encapsulated age
+    self.__medical_history=[]  #Encapsulated medical history
+
+  def add_medical_record(self,record):
+    self.__medical_history.append(record)
+    return f"Medical record added for {self.__name}."
+
+  def get_medical_history(self):
+    return f"Medical history for {self.__name}: {self.__medical_history}"
+
+#Usage
+patient=patient("Rohit",30)
+print(patient.add_medical_record("2024: flu dignosis"))
+print(patient.add_medical_record("2024: fever"))
+print(patient.get_medical_history())
+
