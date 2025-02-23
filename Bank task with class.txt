@@ -1,0 +1,27 @@
+class BankAccount:
+  def __init__(self,holder_name,balance=0):
+    self.holder_name=holder_name
+    self.balance=balance
+
+  def deposit(self,amount):
+      self.balance+amount
+      return self.balance+amount
+
+  def withdraw(self,amount):
+      if amount<=self.balance:
+        self.balance-=amount
+        print(f"{amount} withdrawn. Remaining balance: {self.balance}")
+      else:
+        print("insufiicient funds!")
+
+  def check_balance(self):
+      return f"Account balance for {self.holder_name}: {self.balance}"
+
+
+account=BankAccount("aditya",2000)
+account.deposit(500)
+account.withdraw(150)
+print(account.check_balance())
+
+Output -:
+Account balance for aditya: 2000
