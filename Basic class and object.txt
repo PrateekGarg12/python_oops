@@ -1,0 +1,42 @@
+class Math:
+
+    def __init__ (self,num1,num2):
+      self.num1=num1
+      self.num2=num2
+
+    def my_add(self):
+        print("Total add is: ",self.num1+self.num2)
+
+    def my_sub(self):
+         print("Difference is: ",self.num1-self.num2)
+
+
+a=Math(2,3)
+a.my_add()
+a.my_sub()
+
+## Output -:
+Total add is:  5
+Difference is:  -1
+
+----------------------------------------------------------------------------------------
+class Dog:
+  def __init__(self, name, breed):
+    self.name = name
+    self.breed = breed
+
+  def bark(self):
+    print(f"{self.name} says WOOF!")
+    print(f"{self.breed} this is breed!")
+
+dog1= Dog("Buddy","Golden Retriver")
+dog2=Dog("Max","labrador")
+
+dog1.bark()
+dog2.bark()
+
+Output -:
+Buddy says WOOF!
+Golden Retriver this is breed!
+Max says WOOF!
+labrador this is breed!
