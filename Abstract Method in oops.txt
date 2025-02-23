@@ -1,0 +1,23 @@
+from abc import ABC,abstractmethod
+# Abstract Class..
+class Payment(ABC):
+  @abstractmethod
+  def make_payment(self,amount):
+    pass
+
+#Concrete class for credit card payment..
+class CreditCardPayment(Payment):
+  def make_payment(self,amount):
+    return f"Credit Card payment of ${amount} Processed"
+
+#Concrete class for PayPal payment..
+class PayPalpayment(Payment):
+  def make_payment(self,amount):
+    return f"PayPal Payment of ${amount} Processed"
+
+#Using the classes..
+payment1=CreditCardPayment()
+print(payment1.make_payment(100)) #Output: Credit card payment of $100 processed
+
+payment2=PayPalpayment()
+print(payment2.make_payment(200)) #Output: PayPal payment of $200 processed
